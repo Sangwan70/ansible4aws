@@ -3,7 +3,7 @@
   gather_facts: no    
   connection: local 
   tasks:
-    - name: Assign a policy called S3ReadOnly to the app1 role
+    - name: Assign policy S3ReadOnly to app1 role
       iam_policy:
         iam_type: role
         iam_name: app1
