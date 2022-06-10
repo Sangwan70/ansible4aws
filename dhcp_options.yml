@@ -3,7 +3,7 @@
   connection: local
   gather_facts: no
   vars:
-    region: ap-southeast-2
+    region: us-east-1
     name: test-vpc
   tasks:
     - name: create dhcp options set

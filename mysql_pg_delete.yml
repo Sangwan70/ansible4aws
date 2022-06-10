@@ -3,7 +3,7 @@
   gather_facts: no
   connection: local 
   vars:
-    region: ap-southeast-2
+    region: us-east-1
   tasks:
     - name: delete mysql parameter group
       rds_param_group:

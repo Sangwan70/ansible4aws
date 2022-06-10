@@ -6,8 +6,8 @@
     - name: create record 
       route53:
         command: create
-        zone: yankurniawan.com.
-        record: yankurniawan.com.
+        zone: ramkurniawan.com.
+        record: ramkurniawan.com.
         type: A
         value: 54.79.34.239
 

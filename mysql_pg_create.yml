@@ -3,7 +3,7 @@
   gather_facts: no
   connection: local 
   vars:
-    region: ap-southeast-2
+    region: us-east-1
   tasks:
     - name: create mysql parameter group
       rds_param_group:
@@ -11,7 +11,7 @@
         state: present
         region: "{{ region }}"
         description: MySQL Parameter Group 1
-        engine: mysql5.6
+        engine: mysql5.6 
         params: 
           innodb_lock_wait_timeout: 3600
           max_allowed_packet: 512M

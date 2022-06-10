@@ -3,10 +3,10 @@
   connection: local  
   gather_facts: no    
   vars:  
-    region: ap-southeast-2  
+    region: us-east-1  
     instance_type: t1.micro     
     image: ami-6bf99c51    
-    key: yan-key-pair-apsydney  
+    key: ram-key-pair-us-east  
   tasks:  
     - name: launch ec2 with tags webserver staging 
       ec2:
@@ -15,7 +15,7 @@
         instance_type: "{{ instance_type }}"    
         image: "{{ image }}"     
         wait: yes    
-        group: sg_webserver_apsydney  
+        group: sg_webserver_us-east  
         instance_tags:  
           Name: staging-webserver-1  
           class: webserver  
@@ -27,7 +27,7 @@
         instance_type: "{{ instance_type }}"    
         image: "{{ image }}"     
         wait: yes    
-        group: sg_webserver_apsydney  
+        group: sg_webserver_us-east  
         instance_tags:  
           Name: production-webserver-1  
           class: webserver  
@@ -39,7 +39,7 @@
         instance_type: "{{ instance_type }}"    
         image: "{{ image }}"    
         wait: yes    
-        group: sg_database_apsydney  
+        group: sg_database_us-east  
         instance_tags:  
           Name: staging-database-1  
           class: database  

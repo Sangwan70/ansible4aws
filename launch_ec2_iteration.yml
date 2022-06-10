@@ -4,15 +4,15 @@
   gather_facts: no    
   vars:  
     #your region  
-    region: ap-southeast-2    
+    region: us-east-1    
   tasks:  
     - name: EC2 basic provisioning  
       ec2:
         region: "{{ region }}"  
-        key_name: yan-key-pair-apsydney  
+        key_name: ram-key-pair-us-east  
         instance_type: t1.micro  
         image: ami-6bf99c51      
-        group: sg_webserver_apsydney
+        group: sg_webserver_us-east
         instance_tags:  
           Name: "web{{ item }}"  
       with_sequence: count=5

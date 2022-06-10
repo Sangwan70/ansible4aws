@@ -3,7 +3,7 @@
   gather_facts: no
   connection: local 
   vars:
-    bucketname: yan001
+    bucketname: ram001
   tasks:
     - name: share file
       s3:

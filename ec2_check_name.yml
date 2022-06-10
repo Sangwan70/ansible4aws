@@ -2,11 +2,11 @@
 - hosts: localhost  
   gather_facts: no    
   vars:  
-    region: ap-southeast-2    
-    key: yan-key-pair-apsydney
+    region: us-east-1    
+    key: ram-key-pair-us-east
     type: t2.micro
     image: ami-d9fe9be3
-    sg: sg_webserver_apsydney
+    sg: sg_webserver_us-east
     name: test-01
   tasks:  
     - name: check if instance with name tag exists

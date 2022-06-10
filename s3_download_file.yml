@@ -4,7 +4,7 @@
   connection: local 
   sudo: yes
   vars:
-    bucketname: yan001
+    bucketname: ram001
   tasks:
     - name: download file
       s3:

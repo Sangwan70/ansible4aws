@@ -3,9 +3,10 @@
   gather_facts: no
   connection: local 
   vars:
-    bucketname: yan001
+    bucketname: ram001
   tasks:
     - name: create an S3 bucket
       s3:
         bucket: "{{ bucketname }}"
+        region: us-east-1
         mode: create

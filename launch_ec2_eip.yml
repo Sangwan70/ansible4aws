@@ -3,16 +3,16 @@
   connection: local  
   gather_facts: no    
   vars:  
-    region: ap-southeast-2    
+    region: us-east-1    
   tasks:  
     - name: launch instance
       ec2:
         region: "{{ region }}"  
-        key_name: yan-key-pair-apsydney  
+        key_name: ram-key-pair-us-east  
         instance_type: t1.micro  
         image: ami-6bf99c51  
         wait: yes    
-        group: sg_webserver_apsydney
+        group: sg_webserver_us-east
       register: ec2  
     - name: associate new EIP for the instance    
       ec2_eip:
