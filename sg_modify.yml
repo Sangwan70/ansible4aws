@@ -5,11 +5,9 @@
   vars_files:
     - staging_vpc_info
   vars:  
-    #your region  
     region: us-east-1  
     #your ip address
-    allowed_ip: 54.79.34.239/32
-    #prefix for naming
+    allowed_ip: 49.36.179.93/32
     prefix: staging
     vpc_id: "{{ staging_vpc }}"
     private_subnet: 10.0.1.0/24

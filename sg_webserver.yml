@@ -2,16 +2,21 @@
 - hosts: localhost  
   connection: local  
   gather_facts: no    
+  vars_files:
+    - staging_vpc_info
   vars:  
-    #your region  
     region: us-east-1  
     #your ip address
-    allowed_ip: 123.243.16.53/32
+    allowed_ip: 49.36.179.93/32
+    prefix: staging
+    vpc_id: "{{ staging_vpc }}"
+
   tasks:  
     - name: create security group  
       ec2_group:
         region: "{{ region }}"
         name: sg_webserver_us-east    
+        vpc_id: "{{ staging_vpc }}"
         description: security group for us-east webserver host
         rules:
           # allow ssh access from your ip address  

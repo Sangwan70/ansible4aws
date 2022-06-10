@@ -4,7 +4,7 @@
   gather_facts: no  
   vars:
     region: us-east-1
-    keyname: ram1
+    keyname: ram-key-pair-us-east
   tasks:  
     - name: create key pair  
       ec2_key:

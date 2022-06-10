@@ -11,7 +11,7 @@
         region: "{{ region }}"  
         key_name: ram-key-pair-us-east  
         instance_type: t1.micro  
-        image: ami-6bf99c51      
+        image: ami-06eecef118bbf9259    
         group: sg_webserver_us-east
         instance_tags:  
           Name: "web{{ item }}"  

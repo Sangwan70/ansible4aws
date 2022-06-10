@@ -5,7 +5,6 @@
   vars:  
     region: us-east-1
     prefix: staging
-    # availability zone
     az: us-east-1a
   tasks:  
     - name: create vpc   

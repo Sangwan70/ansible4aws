@@ -3,9 +3,9 @@
   gather_facts: no    
   connection: local 
   tasks:
-    - name: create IAM user yan 
+    - name: create IAM user Ram
       iam:
         iam_type: user
-        name: yan
+        name: ram
         state: present
         groups: admin
